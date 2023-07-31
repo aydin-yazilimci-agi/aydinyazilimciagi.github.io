@@ -1,4 +1,4 @@
-# ankaraphp.github.io
+# aydinyazilimciagi.github.io
 
-AnkaraPHP LandingPage
+Aydın Yazılımcı Ağı LandingPage
 
