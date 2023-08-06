@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Emre Yılmaz",
+    "img": "emre-yilmaz.jpg",
+    "responsibility": [
+      "Kurucu",
+      "Sosyal Medya Sorumlusu",
+      "Kuşadası Etkinlikleri Sorumlusu"
+    ],
+    "accounts": {
+      "github": "delirehberi",
+      "twitter": "delirehberi",
+      "mail": "z@emre.xyz"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Özgür Vurgun",
+    "img": "ozgur-vurgun.jpg",
+    "responsibility": [
+      "Web Sitesi Sorumlusu",
+      "Konuşmacı Daveti"
+    ],
+    "accounts": {
+      "github": "ozgurvurgun",
+      "twitter": "ozgurvrgn",
+      "mail": "ozgurvurgun@gmail.com"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Ali Can Gündüz",
+    "img": "ali-can-gunduz.jpg",
+    "responsibility": [
+      "Etkinlik Duyuruları",
+      "Web Sitesi Sorumlusu",
+      "Efeler Etkinlik Sorumlusu"
+    ],
+    "accounts": {
+      "github": "alicangunduz",
+      "twitter": "AliCanGunduzDev",
+      "mail": "alicangunduz@gmail.com"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Bahar Gümüşer",
+    "img": "bahar-gumuser.jpg",
+    "responsibility": ["Sosyal Medya Sorumlusu"],
+    "accounts": {
+      "github": "bahargumuser",
+      "twitter": "eskiniiz",
+      "mail": "bahargumuser@gmail.com"
+    }
+  }
+]
