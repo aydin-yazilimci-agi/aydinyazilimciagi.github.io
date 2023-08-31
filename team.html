@@ -203,7 +203,30 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/freelancer.js"></script>
-<script src="js/get-data/getTeam.js"></script>
+<script src="handlebars/handlebars.js"></script>
+<script id="team-template" type="text/x-handlebars-template">
+        {{#each dataJson}}
+           <div class="team-member col-sm-3">
+              <div class="member-info">
+                 <div class="caption">
+                    <ul class="roles">
+                       {{#each responsibility}}
+                          <li><i class="fas fa-star"></i>&nbsp;{{this}}</li>
+                       {{/each}}
+                    </ul>
+                 </div>
+                 <img src="img/team/{{img}}" alt="" height="150px" width="150px" class="img-responsive img-circle center-block">
+                 <h3 class="text-center">{{name}}</h3>
+              </div>
+              <ul class="contact">
+                 <li><a href="https://github.com/{{accounts.github}}" target="_blank"><i class="fab fa-github"></i></a></li>
+                 <li><a href="https://twitter.com/{{accounts.twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                 <li><a href="mailto:{{accounts.mail}}" target="_blank"><i class="far fa-envelope"></i></a></li>
+              </ul>
+           </div>
+        {{/each}}
+ </script>
+ <script src="js/get-data/getTeam.js"></script>
 </body>
 
 </html>
