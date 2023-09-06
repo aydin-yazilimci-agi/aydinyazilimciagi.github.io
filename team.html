@@ -95,79 +95,9 @@
           <hr class="star-primary">
         </div>
       </div>
+      <div>
+        <div id="team-info" class="row"></div>
         <div class="row">
-             <div class="team-member col-sm-3">
-            <div class="member-info">
-                   <div class="caption">
-                        <ul class="roles">
-                            <li><i class="fas fa-star"></i>&nbsp;Kurucu</li>
-                            <li><i class="fas fa-star"></i>&nbsp;Sosyal Medya Sorumlusu</li>
-                            <li><i class="fas fa-star"></i>&nbsp;Kuşadası Etkinlikleri Sorumlusu</li>
-                        </ul>
-                    </div>
-                    <img src="img/team/emre-yilmaz.jpg" alt="" height="150px" width="150px" class="img-responsive img-circle center-block">
-                    <h3 class="text-center">Emre Yılmaz</h3>
-                 </div>
-                <ul class="contact">
-                    <li><a href="https://github.com/delirehberi" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://twitter.com/delirehberi" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="mailto:z@emre.xyz" target="_blank"><i class="far fa-envelope"></i></a></li>
-                </ul>
-            </div>
-           <div class="team-member col-sm-3">
-              <div class="member-info">
-                   <div class="caption">
-                        <ul class="roles">
-                            
-                            <li><i class="fas fa-star"></i>&nbsp;Web Sitesi Sorumlusu</li>
-                            <li><i class="fas fa-star"></i>&nbsp;Konuşmacı Daveti</li>
-                        </ul>
-                    </div>
-                    <img src="img/team/ozgur-vurgun.jpg" alt="" height="150px" width="150px" class="img-responsive img-circle center-block">
-                    <h3 class="text-center">Özgür Vurgun</h3>
-                </div>
-                <ul class="contact">
-                    <li><a href="https://github.com/ozgurvurgun/" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://twitter.com/ozgurvrgn" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="mailto:ozgurvurgun@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
-                </ul>
-            </div>
-           <div class="team-member col-sm-3">
-              <div class="member-info">
-                   <div class="caption">
-                        <ul class="roles">
-                            <li><i class="fas fa-star"></i>&nbsp;Etkinlik Duyuruları</li>
-                            <li><i class="fas fa-star"></i>&nbsp;Web Sitesi Sorumlusu</li>
-                            <li><i class="fas fa-star"></i>&nbsp;Efeler Etkinlik Sorumlusu</li>
-                        </ul>
-                    </div>
-                    <img src="img/team/ali-can-gunduz.jpg" alt="" height="150px" width="150px" class="img-responsive img-circle center-block">
-                    <h3 class="text-center">Ali Can Gündüz</h3>
-                </div>
-                <ul class="contact">
-                    <li><a href="https://github.com/alicangunduz" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://twitter.com/AliCanGunduzDev" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="mailto:alicangunduz@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
-                </ul>
-            </div> 
-		
-           <div class="team-member col-sm-3">
-              <div class="member-info">
-                   <div class="caption">
-                        <ul class="roles">
-                            <li><i class="fas fa-star"></i>&nbsp;Sosyal Medya Sorumlusu</li>
-                        </ul>
-                    </div>
-                    <img src="img/team/bahar-gumuser.jpg" alt="" height="150px" width="150px" class="img-responsive img-circle center-block">
-                    <h3 class="text-center">Bahar Gümüşer</h3>
-                </div>
-                <ul class="contact">
-                    <li><a href="https://github.com/bahargumuserz" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://twitter.com/eskiniiz" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="mailto:bahargumuser@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
-                </ul>
-            </div> 
-          <div class="row">
             <div class="col-lg-12 sponsors-title text-center">
               <h3>SPONSORLAR</h3>
               <hr class="star-primary">
@@ -273,7 +203,30 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/freelancer.js"></script>
-
+<script src="handlebars/handlebars.js"></script>
+<script id="team-template" type="text/x-handlebars-template">
+        {{#each dataJson}}
+           <div class="team-member col-sm-3">
+              <div class="member-info">
+                 <div class="caption">
+                    <ul class="roles">
+                       {{#each responsibility}}
+                          <li><i class="fas fa-star"></i>&nbsp;{{this}}</li>
+                       {{/each}}
+                    </ul>
+                 </div>
+                 <img src="img/team/{{img}}" alt="" height="150px" width="150px" class="img-responsive img-circle center-block">
+                 <h3 class="text-center">{{name}}</h3>
+              </div>
+              <ul class="contact">
+                 <li><a href="https://github.com/{{accounts.github}}" target="_blank"><i class="fab fa-github"></i></a></li>
+                 <li><a href="https://twitter.com/{{accounts.twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                 <li><a href="mailto:{{accounts.mail}}" target="_blank"><i class="far fa-envelope"></i></a></li>
+              </ul>
+           </div>
+        {{/each}}
+ </script>
+ <script src="js/get-data/getTeam.js"></script>
 </body>
 
 </html>
